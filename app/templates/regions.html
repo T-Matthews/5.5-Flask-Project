@@ -1,0 +1,33 @@
+{% extends 'components/layout.html' %}
+
+{% block regions %}
+
+
+<div class="container1">
+    <div class="Town-Lists">
+
+{% for region in regionlist %}
+
+        <h1 class=region>{{ region }}</h1>
+        <ul class=ul_table id="double">
+            {% for i in locations_list[loop.index0] %}
+            <li class=li_table>{{ i }}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="Maps">
+        <img src="../static/images/Kanto.png" style="max-width: 330px">
+        <img src="../static/images/Johto.png" style="max-width: 315px">
+        <img src="../static/images/Hoenn.png" style="max-width: 350px">
+        <img src="../static/images/Sinnoh.png" style="max-width: 370px">
+        <img src="../static/images/Unova.png" style="max-width: 400px">
+        <img src="../static/images/Kalos.jpg" style="max-width: 355px">
+        <img src="../static/images/Alola.png" style="max-width: 320px">
+        <img src="../static/images/Galar.png" style="max-width: 300px">
+
+    </div>
+
+</div>
+
+{% endblock regions %}
